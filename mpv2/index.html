@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shubham Rajput</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="shking.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">about</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="home">
+            <div class="myname">
+                <div class="text">
+                    <h1>Shubham</h1>
+                    <h2>Rajput</h2>
+                </div>
+            </div>
+            <div class="mypic">
+                <img src="mypic.jpg" alt="">
+            </div>
+            <div class="mpro">
+                <div class="text">
+                    <h1>A Web Devloper</h1>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openNav()
+            {
+                document.getElementById('sidenav').style.width = '70%';
+                document.getElementById('openmbtn').style.display = 'none';
+                document.getElementById('closembtn').style.display = 'unset';
+                console.log('opened');
+            }
+            function closeNav()
+            {
+                document.getElementById('sidenav').style.width = '0%';
+                document.getElementById('openmbtn').style.display = 'unset';
+                document.getElementById('closembtn').style.display = 'none';
+                console.log('closed');
+            }
+        </script>
+    </body>
+</html>
