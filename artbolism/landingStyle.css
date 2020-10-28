@@ -89,7 +89,7 @@ section.products .sampleProducts {
 section.products .sampleProducts .products {
   width: 20%;
   margin: 0 15px;
-  height: 250px;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
 }
