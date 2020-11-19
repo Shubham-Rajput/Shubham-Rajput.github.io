@@ -9,6 +9,12 @@
 
 section.home {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -18,7 +24,7 @@ section.home .image {
   position: fixed;
   width: 100%;
   top: -234px;
-  left: 0;
+  overflow: hidden;
 }
 
 section.home .image img {
@@ -50,6 +56,23 @@ section.home .bottom h3 {
 
 section.home .bottom h3 span {
   color: #db8965;
+}
+
+@media screen and (max-width: 450px) {
+  section.home .image {
+    top: 0;
+    width: 200%;
+  }
+  section.home .image img {
+    overflow: hidden;
+  }
+  section.home .bottom {
+    bottom: 0vh;
+    height: 30vh;
+  }
+  section.home .bottom h3 {
+    font-size: 1.3rem;
+  }
 }
 
 section.products {
@@ -119,6 +142,33 @@ section.products .footing a {
           box-shadow: 0px 0px 10px #ffc6d0;
 }
 
+@media screen and (max-width: 1300px) {
+  section.products .sampleProducts .products {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  section.products {
+    height: auto;
+  }
+  section.products .sampleProducts {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.products .sampleProducts .products {
+    height: 300px;
+    width: 80%;
+    margin: 20px 0;
+  }
+}
+
 section.about {
   position: relative;
   display: -webkit-box;
@@ -149,6 +199,7 @@ section.about .info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  justify-self: flex-start;
 }
 
 section.about .info h2 {
@@ -179,11 +230,30 @@ section.about .img {
   width: 30%;
   height: 70%;
   overflow: hidden;
+  justify-self: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border: 12px solid #e5e5e5;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  section.about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 20% 5%;
+  }
+  section.about .info {
+    height: 40vh;
+    width: 90%;
+  }
+  section.about .img {
+    display: none;
+  }
 }
 
 section.contactMe {
@@ -286,9 +356,14 @@ section.contactMe .msg input[type="text"] {
   border-radius: 5px;
 }
 
-section.contactMe .msg input[placeholder="message"] {
-  text-align: justify;
+section.contactMe .msg textarea[placeholder="message"] {
   height: 65%;
+  width: 90%;
+  padding: 5% 5%;
+  background: #fcebe4;
+  color: #BB9281;
+  border: none;
+  border-radius: 5px;
 }
 
 section.contactMe .msg a {
@@ -302,5 +377,65 @@ section.contactMe .msg a {
           box-shadow: 0 0 10px #fcebe4;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media screen and (max-width: 450px) {
+  section.contactMe {
+    overflow: hidden;
+    padding: 20% 10%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  section.contactMe .info {
+    height: 40vh;
+    width: 100%;
+  }
+  section.contactMe .msg {
+    margin-top: 5vh;
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  background: #e5e5e5;
+  padding: 0 10%;
+  color: #8f8f8f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer a {
+  color: #727272;
+  font-size: .8rem;
+}
+
+footer h3 {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 450px) {
+  footer a {
+    font-size: .8em;
+  }
+  footer h3 {
+    font-size: .6em;
+  }
 }
 /*# sourceMappingURL=landingStyle.css.map */
